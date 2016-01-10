@@ -71,10 +71,8 @@
 		var that = this;
 		this.phraseHeight = that.wdtPhraseActiveCat.querySelector('.wdt-loading-phrase').scrollHeight;
 
-		console.log(document.querySelector('.wdt-loading-phrase'));
-
 		that.currentIndex = 0;
-		that.currentTransform = this.phraseHeight;
+		that.currentTransform = 0;
 
 		that.spinInternal = setInterval(function () {
 			that.activePhrases = that.wdtPhraseActiveCat.querySelectorAll('.wdt-loading-phrase');
@@ -82,9 +80,7 @@
 			that.currentIndex++;
 			that.currentTransform = that.currentTransform - that.phraseHeight;
 
-			for (var i = 0; i < that.activePhrases.length; i++) {
-				css(that.activePhrases[i], {transform: 'translateY(' + that.currentTransform + 'px)'});
-			}
+			css(that.wdtPhraseActiveCat, {transform: 'translateY(' + that.currentTransform + 'px)'});
 
 			if (that.currentIndex > 1) {
 				var currentNone = that.activePhrases[that.currentIndex - 2];
@@ -108,8 +104,9 @@
 		var allPhrases = document.querySelectorAll('.wdt-loading-phrase');
 		for (var i = 0; i < allPhrases.length; i++) {
 			removeClass(allPhrases[i], 'wdt-checked');
-			allPhrases[i].style.transform = '';
 		}
+
+		this.wdtPhraseActiveCat.style.transform = '';
 
 		for (var i = 0; i < clonePhrases.length; i++) {
 			removeElement(clonePhrases[i]);
