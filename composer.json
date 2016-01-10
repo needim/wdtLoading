@@ -1,0 +1,23 @@
+{
+	"name": "needim/wdtLoading",
+	"description": "Asana like application loading screen with custom phrases support",
+	"type": "library",
+	"license": "MIT",
+	"homepage": "http://ned.im/wdtLoading",
+	"keywords": [
+		"loading",
+		"spinner",
+		"plugin",
+		"application",
+		"javascript",
+		"wdt"
+	],
+	"authors": [
+		{
+			"name": "Nedim Arabacı",
+			"homepage": "https://ned.im",
+			"role": "Developer"
+		}
+	],
+	"minimum-stability": "dev"
+}
