@@ -46,6 +46,8 @@
 	-webkit-transition: all 1s ease;
 	transition: all 1s ease;
 	transform: translateY(30px);
+	line-height: 30px;
+	height: 30px;
 }
 
 .wdt-loading-phrase:before {
