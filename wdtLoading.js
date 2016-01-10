@@ -1,6 +1,6 @@
 /*!
  @package wdtLoading - Application loading screen
- @version version: 0.0.1
+ @version version: 0.0.2
  @contributors https://github.com/needim/wdtLoading/graphs/contributors
  @documentation Examples and Documentation - http://ned.im/wdtLoading/
  @license Licensed under the MIT licenses: http://www.opensource.org/licenses/mit-license.php
