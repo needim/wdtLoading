@@ -5,7 +5,7 @@ wdtLoading.start();
 
 	$(function() {
 
-		$('.show-docs').on('click', function(e) {
+		$('.show-docs').on('click touchstart', function(e) {
 			e.preventDefault();
 			wdtLoading.done();
 			return false;
