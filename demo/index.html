@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wdtLoading Demo</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="../wdtLoading.css"/>
+    <script type="text/javascript" src="../wdtLoading.js"></script>
+
+</head>
+<body>
+
+    <div class="wdt-loading-screen">
+
+        <div class="wdt-loading-phrases">
+
+            <div class="wdt-loading-phrase-category" data-category="default">
+                <div class="wdt-loading-phrase">Doing great things...</div>
+                <div class="wdt-loading-phrase">Writing project descriptions...</div>
+                <div class="wdt-loading-phrase">Feeding the unicorns...</div>
+                <div class="wdt-loading-phrase">Collecting jobs for you...</div>
+                <div class="wdt-loading-phrase">Calculating scores...</div>
+                <div class="wdt-loading-phrase">Finding best talented people...</div>
+                <div class="wdt-loading-phrase">Fixing responsive issues...</div>
+                <div class="wdt-loading-phrase">Painting office walls...</div>
+                <div class="wdt-loading-phrase">Coffee break...</div>
+                <div class="wdt-loading-phrase">Feeding cats...</div>
+                <div class="wdt-loading-phrase">Health check...</div>
+                <div class="wdt-loading-phrase">Storage check...</div>
+            </div>
+
+            <div class="wdt-loading-phrase-category" data-category="profile">
+                <div class="wdt-loading-phrase">Getting avatar...</div>
+                <div class="wdt-loading-phrase">Collecting project memberships...</div>
+                <div class="wdt-loading-phrase">Getting dom together...</div>
+                <div class="wdt-loading-phrase">Getting followers...</div>
+                <div class="wdt-loading-phrase">Calculating best skills...</div>
+                <div class="wdt-loading-phrase">Getting feed...</div>
+                <div class="wdt-loading-phrase">Writing title...</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container" id="app">
+        <div class="row">
+            <div class="col-md-6 col-md-push-3 col-xs-12 text-center" style="padding-top: 250px">
+
+                Website content
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        wdtLoading.start();
+
+        setTimeout(function() {
+            wdtLoading.done();
+        }, 6500);
+    </script>
+</body>
+</html>
