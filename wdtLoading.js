@@ -74,24 +74,31 @@
 		that.currentIndex = 0;
 		that.currentTransform = 0;
 
+		that.spinOnce();
 		that.spinInternal = setInterval(function () {
-			that.activePhrases = that.wdtPhraseActiveCat.querySelectorAll('.wdt-loading-phrase');
-			addClass(that.activePhrases[that.currentIndex], 'wdt-checked');
-			that.currentIndex++;
-			that.currentTransform = that.currentTransform - that.phraseHeight;
-
-			css(that.wdtPhraseActiveCat, {transform: 'translateY(' + that.currentTransform + 'px)'});
-
-			if (that.currentIndex > 1) {
-				var currentNone = that.activePhrases[that.currentIndex - 2];
-				var currentClone = currentNone.cloneNode(true);
-				removeClass(currentClone, 'wdt-checked');
-				addClass(currentClone, 'wdt-cloned-phrase');
-				currentClone.style.transform = '';
-				that.wdtPhraseActiveCat.appendChild(currentClone);
-			}
+			that.spinOnce();
 		}, this.options.speed);
 	};
+	
+	wdtLoading.spinOnce = function () {
+		var that = this;
+		
+		that.activePhrases = that.wdtPhraseActiveCat.querySelectorAll('.wdt-loading-phrase');
+		addClass(that.activePhrases[that.currentIndex], 'wdt-checked');
+		that.currentIndex++;
+		that.currentTransform = that.currentTransform - that.phraseHeight;
+
+		css(that.wdtPhraseActiveCat, {transform: 'translateY(' + that.currentTransform + 'px)'});
+
+		if (that.currentIndex > 1) {
+			var currentNone = that.activePhrases[that.currentIndex - 2];
+			var currentClone = currentNone.cloneNode(true);
+			removeClass(currentClone, 'wdt-checked');
+			addClass(currentClone, 'wdt-cloned-phrase');
+			currentClone.style.transform = '';
+			that.wdtPhraseActiveCat.appendChild(currentClone);
+		}	
+	}
 
 	wdtLoading.done = function () {
 		if (this.spinInternal)
